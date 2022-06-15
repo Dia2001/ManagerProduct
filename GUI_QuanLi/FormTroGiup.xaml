@@ -1,0 +1,43 @@
+﻿<Window x:Class="GUI_QuanLi.FormTroGiup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_QuanLi"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="FormTroGiup" Height="450" Width="800">
+    <Grid Background="Gray">
+        <StackPanel>
+            <TextBlock FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center">Trợ Giúp</TextBlock>
+        </StackPanel>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"  Height="250" Width="520" Background="Gainsboro" Foreground="Blue">
+            <Span>
+                Phần mềm "quản lý mặt hàng" được viết bằng ngôn ngữ C# và hệ thống quản trị cơ sở dữ
+            </Span>
+            <LineBreak/>
+            <Span>
+               liệu SQl.   Với giao tiếp đồ họa để người dùng cảm thấy rất thích thú và không nhàm chán. 
+            </Span>
+            <LineBreak/>  
+            <Span>
+                 Giao diện chính là bảng mặt hàng. Bên cạnh đó gồm 2 giao diện phụ là bảng loại hàng và
+            </Span>
+            <LineBreak/> 
+            <Span>
+                nhà cung cấp để người dùng có thể thao tác.
+            </Span>
+             <LineBreak/>
+            <Span>
+                 Chỉ cần có tài khoản đăng nhập vào thì muốn thao tác ở bảng nào ta chọn ô tương tứng. 
+            </Span>
+        </TextBlock>
+    </Grid>
+</Window>

@@ -1,0 +1,75 @@
+﻿<Window x:Class="GUI_QuanLi.FormDangKy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_QuanLi"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="FormDangKy" Height="600" Width="500">
+    <Grid>
+        <Image Source="D:\Prersonal folders3\Screenshots\nhung-hinh-nen-mau-tim-cuc-ki-sinh-dong-cho-powerpoint-1484912706-20.jpg" Stretch="UniformToFill"/>
+        <StackPanel>
+            <TextBlock FontSize="40" HorizontalAlignment="Center" Margin="0,30,0,0" Foreground="Black">CREATE YOUR ACCOUNT</TextBlock>
+        </StackPanel>
+        <materialDesign:Card HorizontalAlignment="Center" VerticalAlignment="Center" Height="250" Width="230" >
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="15,0,15,0"/>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBox 
+                    x:Name="txtusername"
+                    materialDesign:HintAssist.Hint="Username"
+                    Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <PasswordBox
+                    x:Name="pwpass"
+                    materialDesign:HintAssist.Hint="Password"
+                    VerticalAlignment="Center"    />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <PasswordBox
+                    x:Name="pwConfirmpassword"
+                    materialDesign:HintAssist.Hint="Confirm Password"
+                    VerticalAlignment="Center" />
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Button
+                        x:Name="btncreate"
+                         Style="{StaticResource MaterialDesignRaisedButton}"
+                         Height="25"
+                         ToolTip="Resource name: MaterialDesignRaisedButton" Content="Create your account"
+                         Background="Violet" Click="btncreate_Click"   />
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Button
+                        x:Name="btncomeback"
+                        Grid.Column="1"
+                        FontSize="11"
+                        Height="21"
+                        Style="{StaticResource MaterialDesignRaisedButton}"
+                         ToolTip="Resource name: MaterialDesignRaisedButton"
+                        Content="Back" Click="btncomeback_Click" />
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>

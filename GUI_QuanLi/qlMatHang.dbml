@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLMatHang" Class="qlMatHangDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-M3IMJK3\SQLEXPRESS;Initial Catalog=QLMatHang;Integrated Security=True" SettingsObjectName="GUI_QuanLi.Properties.Settings" SettingsPropertyName="QLMatHangConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.MatHang" Member="MatHangs">
+    <Type Name="MatHang">
+      <Column Name="MaHang" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="MaCongTy" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="MaLoaiHang" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaHang" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Association Name="LoaiHang_MatHang" Member="LoaiHang" ThisKey="MaLoaiHang" OtherKey="MaLoaihang" Type="LoaiHang" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="NhaCungCap_MatHang" Member="NhaCungCap" ThisKey="MaCongTy" OtherKey="MaCongTy" Type="NhaCungCap" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiHang" Member="LoaiHangs">
+    <Type Name="LoaiHang">
+      <Column Name="MaLoaihang" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoaihang" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="LoaiHang_MatHang" Member="MatHangs" ThisKey="MaLoaihang" OtherKey="MaLoaiHang" Type="MatHang" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhaCungCap" Member="NhaCungCaps">
+    <Type Name="NhaCungCap">
+      <Column Name="MaCongTy" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenCongTy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenGiaoDich" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DienThoai" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="NhaCungCap_MatHang" Member="MatHangs" ThisKey="MaCongTy" OtherKey="MaCongTy" Type="MatHang" />
+    </Type>
+  </Table>
+</Database>
